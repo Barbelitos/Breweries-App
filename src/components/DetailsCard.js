@@ -3,6 +3,7 @@ import BackButton from "./BackButton";
 import classes from "./DetailsCard.module.css";
 
 const DetailsCard = (props) => {
+  console.log(props);
   return (
     <div className={classes["details-card"]}>
       <h2>{props.brewery.name}</h2>

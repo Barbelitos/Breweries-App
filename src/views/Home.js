@@ -6,10 +6,10 @@ import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   const [breweries, setBreweries] = useState([]);
-  const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState("");
 
   const fetchBreweriesHandler = useCallback(async () => {
-    setError(null);
     try {
       const response = await fetch("https://api.openbrewerydb.org/breweries");
       if (!response.ok) {
@@ -33,7 +33,7 @@ const Home = () => {
 
       setBreweries(loadedBreweries);
     } catch (error) {
-      setError(error.message);
+      console.log(error);
     }
   }, []);
 
@@ -41,11 +41,28 @@ const Home = () => {
     fetchBreweriesHandler();
   }, [fetchBreweriesHandler]);
 
+  const searchHandler = (searchTerm) => {
+    setSearchTerm(searchTerm);
+    if (searchTerm !== "") {
+      const updatedBreweries = breweries.filter((brewery) => {
+        return Object.values(brewery)
+          .join("")
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
+      });
+      setSearchResults(updatedBreweries);
+    } else {
+      setSearchResults(breweries);
+    }
+  };
+
   return (
     <>
       <Header />
-      <SearchBar />
-      <BreweriesContainer breweries={breweries} />
+      <SearchBar searchTerm={searchTerm} searchKeyword={searchHandler} />
+      <BreweriesContainer
+        breweries={searchTerm.length < 1 ? breweries : searchResults}
+      />
     </>
   );
 };
