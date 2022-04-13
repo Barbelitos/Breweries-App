@@ -1,5 +1,5 @@
 import classes from "./Header.module.css";
-import beerImage from "../assets/Beer.jpg";
+import beerImage from "../../assets/Beer.jpg";
 
 const Header = () => {
   return (

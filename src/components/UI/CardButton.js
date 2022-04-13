@@ -7,9 +7,6 @@ const CardButton = (props) => {
 
   const buttonClickHandler = () => {
     navigate("/details", { state: props.brewery });
-    console.log(props.name);
-    console.log(props.brewery);
-    console.log(props.brewery.id);
   };
 
   return (

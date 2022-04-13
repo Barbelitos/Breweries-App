@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 
-import Header from "../components/Header";
-import BreweriesContainer from "../components/BreweriesContainer";
-import SearchBar from "../components/SearchBar";
+import Header from "../components/Layout/Header";
+import BreweriesContainer from "../components/Breweries/BreweriesContainer";
+import SearchBar from "../components/UI/SearchBar";
 
 const Home = () => {
   const [breweries, setBreweries] = useState([]);
