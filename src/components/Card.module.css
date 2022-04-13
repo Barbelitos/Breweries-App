@@ -1,0 +1,31 @@
+.card {
+  background: white;
+  width: 15rem;
+  border-radius: 10px;
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card h2 {
+  background-color: rgb(157, 139, 36);
+  font-size: 1.2rem;
+  margin: 0;
+  height: 4rem;
+  padding: 0.8rem 0.1rem;
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.card h4 {
+  font-size: 1.1rem;
+}
+
+h2,
+h3,
+h4 {
+  text-align: center;
+}

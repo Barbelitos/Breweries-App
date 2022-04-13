@@ -1,0 +1,16 @@
+.back-button {
+  margin: 3rem auto;
+  width: 20%;
+  background-color: rgb(157, 139, 36);
+  height: 3rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+
+.back-button:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,17 @@
+.details-card {
+  margin: 10rem auto;
+  width: 60%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.details-card h2 {
+  margin-bottom: 3rem;
+  background-color: rgb(157, 139, 36);
+  border-radius: 15px;
+  height: 2rem;
+  padding: 0.2rem;
+}
